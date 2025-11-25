@@ -66,29 +66,29 @@ git fetch origin
 git reset --hard origin/main
 git push --force origin feature/my-change
 ```
-###Create a new branch (best practice: don't work on main)
+### Create a new branch (best practice: don't work on main)
 ``` bash
 git checkout -b feature/edit-readme
 ```
-###Edit a file
+### Edit a file
 ``` bash
 vi README.md
 ```
-###Check what changed
+### Check what changed
 ``` bash
 git status
 # Shows modified files and your branch name
 git diff README.md
 # Shows the unstaged changes you made in README.md
 ```
-###Stage (add) changes
+### Stage (add) changes
 ``` bash
 git add README.md
 # or add everything changed:
 git add -A
 
 ````
-###Confirm staged changes:
+### Confirm staged changes:
 ``` bash
 git status
 git diff --staged   # shows exactly what will be committed
@@ -100,7 +100,7 @@ git commit -m "Improve README: add clone and usage examples"
 git commit
 # (this opens your editor to write subject + body)
 ```
-###Push the branch to remote
+### Push the branch to remote
 ``` bash
 git push -u origin feature/edit-readme
 ```
