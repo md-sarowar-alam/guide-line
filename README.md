@@ -27,7 +27,17 @@ wsl --import Ubuntu "C:\WSL" "C:\WSL-Backup\Ubuntu-Backup.tar"
 wsl --unregister Ubuntu
 ```
 ------------------------------------------------------------------------
-## Git Examples | Clone Specific Branch
+### 1) Install Git on Ubuntu
+**Installation**
+``` bash
+sudo apt install git -y
+```
+**Verify**
+``` bash
+git --version
+```
+------------------------------------------------------------------------
+### Git Examples | Clone Specific Branch
 ``` bash
 git clone --branch feature/test-change-02 --single-branch git@github.com:md-sarowar-alam/batch-08-class-git.git
 ```
