@@ -1,6 +1,5 @@
 ------------------------------------------------------------------------
-## WSL (Windows Subsystem for Linux) Setup
-### Enable WSL (PowerShell Admin)
+## WSL (Windows Subsystem for Linux) Setup | Enable WSL (PowerShell Admin)
 ``` powershell
 wsl --install
 wsl --set-default-version 2
@@ -28,31 +27,25 @@ wsl --import Ubuntu "C:\WSL" "C:\WSL-Backup\Ubuntu-Backup.tar"
 wsl --unregister Ubuntu
 ```
 ------------------------------------------------------------------------
-## Git Examples
-### Clone Specific Branch
-
+## Git Examples | Clone Specific Branch
 ``` bash
 git clone --branch feature/test-change-02 --single-branch git@github.com:md-sarowar-alam/batch-08-class-git.git
 ```
 ### Clone deafult / main branch 
-
 ``` bash
 git clone git@github.com:md-sarowar-alam/batch-08-class-git.git
 ```
 ### Merge Main Into Branch
-
 ``` bash
 git checkout feature/test-change-02
 git pull origin main
 ```
-
 ### Rebase Branch
 
 ``` bash
 git fetch origin
 git rebase origin/main
 ```
-
 ### Commit or Stash Before Rebase
 ``` bash
 git add .
@@ -113,8 +106,19 @@ git pull origin main
 git merge origin/main
 ```
 ------------------------------------------------------------------------
-### Here is exactly how to create a repo locally and push it to GitHub
-### Create a local folder for your new repository
+## GitHub CLI Setup (Ubuntu)
+
+``` bash
+sudo apt install curl -y
+curl -fsSL https://cli.github.com/packages/githubcli-archive-keyring.gpg | sudo dd of=/usr/share/keyrings/githubcli-archive-keyring.gpg
+sudo chmod go+r /usr/share/keyrings/githubcli-archive-keyring.gpg
+echo "deb [arch=$(dpkg --print-architecture) signed-by=/usr/share/keyrings/githubcli-archive-keyring.gpg] https://cli.github.com/packages stable main" | sudo tee /etc/apt/sources.list.d/github-cli.list > /dev/null
+sudo apt update
+sudo apt install gh -y
+gh --version
+```
+------------------------------------------------------------------------
+### Here is exactly how to create a repo locally and push it to GitHub | Create a local folder for your new repository
 ``` bash
 mkdir my-new-repo
 cd my-new-repo
@@ -136,8 +140,7 @@ echo "Hello GitHub" > README.md
 git add .
 git commit -m "Initial commit"
 ```
-### Create a remote repository on GitHub
-### Use GitHub CLI (gh)
+### Create a remote repository on GitHub | Use GitHub CLI (gh)
 ``` bash
 gh repo create my-new-repo --public --source=. --remote=origin
 gh repo create my-new-repo --private --source=. --remote=origin
