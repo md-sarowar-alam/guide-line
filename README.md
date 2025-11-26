@@ -70,8 +70,21 @@ git add README.md
 git commit -m "Add my First File"
 git push origin main
 ```
-
-
+### Create a New Branch
+``` bash
+git checkout -b feature/my-branch
+git branch -a
+```
+### Edit Files in the Branch
+``` bash
+git add .
+# commit
+git commit -m "My updates in branch"
+# Push Branch to Remote
+git push -u origin feature/my-branch
+# Get Latest update of the branch from Remote Repo while local branch Selected * feature/my-branch
+git pull
+```
 
 
 
